@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Yelpcamp</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/stylesheets/styling.css">
+        <link rel="stylesheet" href="/stylesheets/about.css">
+        <script src="https://use.fontawesome.com/99bb01e1a0.js"></script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">EggsHub</a>
+                </div>
+           
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="/dashboard">Dashboard</a></li>
+                        <li><a href="/compare">Compare Countries</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/campgrounds">Community Forum</a></li>
+                        <% if(!currentUser){ %>
+                            <li><a href="/login">Login</a></li>
+                            <li><a href="/register">Sign Up</a></li>
+                        <% } else{ %>
+                            <li><a href="#">Signed In As <%= currentUser.username %></a></li>
+                            <li><a href="/logout">Log Out</a></li>
+                        <% } %>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
